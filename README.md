@@ -1,4 +1,4 @@
-# Zeus solutions Demo
+# Mini energetic calculator
 
 Run command:
 ```
