@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/assets/css/styles.css">
+
+    <script type="text/javascript" src="/assets/js/third_party/es6-shim.min.js"></script>
+
+    <script type="module" src="/assets/js/main.js"></script>
+
+    <title>Energy Comparison</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-light bg-dark-blue">
+    <a class="navbar-brand text-white font-weight-light" href="/">
+        Demo
+    </a>
+</nav>
+<div class="container-fluid m-auto justify-content-center">
+
+
+        <div class="main-content col-lg-8 mx-auto">
+
+            <!-- CALCULATOR -->
+
+            <div class="calculator shadow-sm mb-5 mw">
+                <div class="calculator-header px-3 py-3 rounded-top d-flex justify-content-between">
+                    <div class="h5 calculator-header__text text-left text-white m-0">Mini kalkulačka</div>
+                </div>
+                <div class="calculator__content_wrapper">
+
+                    <div class="calculator-info mt-2 mx-5">
+
+                        <div class="calculator-info__text  calculator-info__text--info alert alert-info mt-4 "
+                             role="alert">
+                        </div>
+
+                        <div class="calculator-info__text calculator-info__text--warning alert alert-warning mt-4"
+                             role="alert">
+                        </div>
+                    </div>
+                    <div id="appContent" class="calculator-content text-center row justify-content-center rounded-bottom pt-2 pb-3 px-3">
+                        <form id="calculatorForm" class="calculator-form col-md-10 rounded-bottom pt-2 pb-3 px-3">
+
+                            <div class="form-group text-left mb-5">
+                                <label class="col-form-label" for="commoditySelect">Komodita</label>
+                                <div class="">
+                                    <select id="commoditySelect" class="calculator-form__select form-control w-100"
+                                            required>
+                                        <option value="" selected disabled>Vyberte typ energie</option>
+                                        <option value="electricity">Elektřina</option>
+                                        <option value="gas">Plyn</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <fieldset class="form-group text-left">
+                                <div class="form-group">
+                                    <label class="col-form-label" for="energyConsumption">Roční spotřeba
+                                    </label>
+                                    <input class="calculator-input form-control w-100" id="energyConsumption"
+                                           placeholder="MWh" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class=for="energyPrice">Cena</label>
+                                    <input class="calculator-input form-control w-100" id="energyPrice"
+                                           placeholder="Kč/MWh" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-form-label" for="pdtCharge">Poplatek za OPM</label>
+                                    <input class="calculator-input form-control w-100" id="pdtCharge"
+                                           placeholder="Kč/měsíc" required>
+                                </div>
+
+                            </fieldset>
+
+                            <div class="row">
+                                <div class="col text-right">
+                                    <button type="button" id="clearBtn"
+                                            class="calculator-btn__clear btn btn-danger btn-sm">Vymazat
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="calculator-btns row mt-sm-n3">
+                                <div class="col">
+                                    <button type="submit" id="submitBtn" class="calculator-btn__submit btn btn-primary btn-lg">
+                                        Spočítat
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+    </div>
+
+</div>
+
+
+<footer class="footer bg-dark-blue mt-auto">
+    <div class="container">
+        <div class="footer-content row justify-content-center text-center">
+            <div class="footer-slogan col">
+                <span class="footer-slogan__text text-white">  Copyright © 2020 Demo  </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!-- <div class="container-fluid my-5">
+
+
+        <div class="main-content col-lg-8">
+
+
+<div class="calculator shadow-sm mb-5 mw">
+    <div class="calculator-header px-3 py-3 rounded-top d-flex justify-content-between">
+        <div class="h5 calculator-header__text text-left text-white m-0">Mini kalkulačka</div>
+    </div>
+    <div class="calculator__content_wrapper">
+
+        <div class="calculator-info mt-4 mx-3">
+
+            <div class="calculator-info__text calculator-info__text--info alert alert-info"
+                 role="alert">
+            </div>
+
+            <div class="calculator-info__text calculator-info__text--warning alert alert-warning"
+                 role="alert">
+            </div>
+        </div>
+        <div id="appContent" class="calculator-content text-center row justify-content-center rounded-bottom pt-2 pb-3 px-3">
+            <form id="calculatorForm" class="calculator-form col-md-10 rounded-bottom pt-2 pb-3 px-3">
+
+                <div class="form-group text-left mb-5">
+                    <label class="col-form-label" for="commoditySelect">Komodita</label>
+                    <div class="">
+                        <select id="commoditySelect" class="calculator-form__select form-control w-100"
+                                required>
+                            <option value="" selected disabled>Vyberte typ energie</option>
+                            <option value="electricity">Elektřina</option>
+                            <option value="gas">Plyn</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset class="form-group text-left">
+                    <div class="form-group">
+                        <label class="col-form-label" for="energyConsumption">Roční spotřeba
+                        </label>
+                        <input class="calculator-input form-control w-100" id="energyConsumption"
+                               placeholder="MWh" required>
+                    </div>
+                    <div class="form-group">
+                        <label class=for="energyPrice">Cena</label>
+                        <input class="calculator-input form-control w-100" id="energyPrice"
+                               placeholder="Kč/MWh" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="pdtCharge">Poplatek za OPM</label>
+                        <input class="calculator-input form-control w-100" id="pdtCharge"
+                               placeholder="Kč/měsíc" required>
+                    </div>
+
+                </fieldset>
+
+                <div class="row">
+                    <div class="col text-right">
+                        <button type="button" id="clearBtn"
+                                class="calculator-btn__clear btn btn-danger btn-sm">Vymazat
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calculator-btns row mt-sm-n3">
+                    <div class="col">
+                        <button type="submit" id="submitBtn" class="calculator-btn__submit btn btn-primary btn-lg">
+                            Spočítat
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+</div>
+
+</div>
+                   -->

@@ -1,0 +1,95 @@
+body{
+    font-size: 100%;
+}
+
+:root {
+    --primary-color: #09408a;
+    --secondary-color: #ea7700;
+}
+
+.bg-dark-blue {
+    background-color: var(--primary-color);
+}
+
+
+.navbar {
+    margin-bottom: 5vh;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.h5{
+    font-weight: 400;
+}
+
+
+
+.calculator {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.calculator-header{
+    background-color: var(--secondary-color);
+}
+
+.calculator-btn__return{
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.1rem;
+}
+
+#calculatorForm{
+    transition-property: width;
+    transition: width 2s;
+}
+
+.calculator-result{
+    margin-top: 1rem;
+}
+
+.calculator-info__text {
+    display: none;
+}
+
+
+
+.footer-content{
+    margin: 1.3vh auto;
+}
+
+.footer-slogan__text {
+    font-size: 1rem
+}
+
+
+.calculator-btn__clear {
+    position: relative;
+    z-index: 100;
+}
+
+.calculator.calculator-result{
+    max-width: unset;
+}
+
+.table{
+    margin-bottom: 0;
+}
+
+.alert-active {
+    animation: blink 1s linear;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 30%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
